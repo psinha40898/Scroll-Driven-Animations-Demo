@@ -31,8 +31,8 @@ function ImageSection({ id, src, scrollYProgress }: { id: number; src: string; s
         opacity
       }}
     >
-      <img src={src} alt={`Dummy image ${id}`} style={{ width: '200px', height: '300px', objectFit: 'cover' }} />
-      <motion.h2 style={{ y, position: 'absolute', left: '100%', marginLeft: '20px', whiteSpace: 'nowrap' }}>{`#00${id}`}</motion.h2>
+      <img src={src} alt={`Dummy image ${id}`} style={{ width: '150', height: '300px', objectFit: 'cover' }} />
+      {/* <motion.h2 style={{ y, position: 'absolute', left: '100%', marginLeft: '20px', whiteSpace: 'nowrap' }}>{`#00${id}`}</motion.h2> */}
     </motion.div>
   )
 }
@@ -43,11 +43,11 @@ export default function ScrollAnimation() {
     target: containerRef,
     offset: ["start start", "end start"]
   })
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001
-  })
+  // const scaleX = useSpring(scrollYProgress, {
+  //   stiffness: 100,
+  //   damping: 30,
+  //   restDelta: 0.001
+  // })
 
   const images = [
     "https://dummyimage.com/600x400/000/fff&text=1",
@@ -65,7 +65,7 @@ export default function ScrollAnimation() {
           <ImageSection key={index} id={index + 1} src={src} scrollYProgress={scrollYProgress} />
         ))}
       </div>
-      <motion.div className="progress" style={{ scaleX }} />
+      {/* <motion.div className="progress" style={{ scaleX }} /> */}
 
     </div>
           <div className="min-h-[1280px] border-2 border-blue-500"></div></>

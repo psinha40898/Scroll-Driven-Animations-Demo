@@ -63,6 +63,3 @@ To learn more about the technologies used in this project, check out the followi
 - [React Documentation](https://reactjs.org/docs/getting-started.html)
 - [Framer Motion Documentation](https://www.framer.com/motion/)
 
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
